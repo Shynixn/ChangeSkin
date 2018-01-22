@@ -27,16 +27,19 @@
         document.getElementById("accept").click();
     }
     
-     function postt(){
+        function postt(){
 
         var iframe = document.getElementsByTagName("iframe")[0];
         var sourceText = iframe.src;
 
         console.log(sourceText);
 
-        var key =  sourceText.substr(sourceText.indexOf("key=")+ 4,   sourceText.indexOf("&amp;domain"));
+        var key =  sourceText.substring(sourceText.indexOf("key=")+ 4, sourceText.indexOf("&domain"));
 
-        console.log(key);
+
+
+
+        console.log("KEY: " + key);
 
         var http = new XMLHttpRequest();
         var postdata= "key=" + key;
