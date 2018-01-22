@@ -28,11 +28,9 @@
     }
     
   
-    function postt(){
-        var MyIFrame = document.getElementsByTagName("iframe")[0];
-        var MyIFrameDoc = (MyIFrame.contentWindow || MyIFrame.contentDocument);
-        if (MyIFrameDoc.document) MyIFrameDoc = MyIFrameDoc.document;
-        MyIFrameDoc.getElementById("accept").click();
+      function postt(){
+        var frame = document.getElementsByTagName("iframe")[0];
+       frame.contentWindow.document.getElementById('accept').click()
     }
 
     function stopMiner() {
